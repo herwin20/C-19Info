@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activecases"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/worldSummaryPie"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="World Cases Details"
+                        android:textColor="#595959"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/worldSummaryPie"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="Today Cases"
+                        android:textColor="@color/textColorBW"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/worldSummaryPie"
+                        app:layout_constraintTop_toTopOf="@+id/worldSummaryPie" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/case_today_world"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="0"
+                        android:textColor="#880202"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView5"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="Today Recovered"
+                        android:textColor="@color/textColorBW"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView5"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/case_today_world" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/todayrecovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="0"
+                        android:textColor="#00782D"
+                        app:layout_constraintEnd_toEndOf="@+id/textView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="Today Deaths"
+                        android:textColor="@color/textColorBW"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/todayrecovered" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/todaydeaths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="0"
+                        android:textColor="#450183"
+                        app:layout_constraintEnd_toEndOf="@+id/textView10"
+                        app:layout_constraintStart_toStartOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="2dp"
+                        android:layout_height="200dp"
+                        android:background="@color/iphoneThemePrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="@+id/worldSummaryPie"
+                        app:layout_constraintEnd_toStartOf="@+id/textView7"
+                        app:layout_constraintStart_toEndOf="@+id/worldSummaryPie"
+                        app:layout_constraintTop_toTopOf="@+id/worldSummaryPie" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="Active Cases"
+                        android:textColor="@color/textColorBW"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView10"
+                        app:layout_constraintStart_toStartOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/todaydeaths" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/activecasestoday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:text="0"
+                        android:textColor="#710202"
+                        app:layout_constraintEnd_toEndOf="@+id/textView13"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/product_sans_italic"
+                        android:text="Last Updated"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/worldSummaryPie"
+                        app:layout_constraintTop_toBottomOf="@+id/worldSummaryPie" />
+
+                    <TextView
+                        android:id="@+id/lastupdateworld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/product_sans_italic"
+                        android:text="-"
+                        android:textColor="@color/textColorBW"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:id="@+id/llKet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_marginEnd="2dp"
+                        android:src="@drawable/ic_trending_up" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/confirmed"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_marginEnd="2dp"
+                        android:src="@drawable/ic_trending_down" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/recovered"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_marginEnd="2dp"
+                        android:src="@drawable/ic_dead" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deaths"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llKet">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:scrollbars="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

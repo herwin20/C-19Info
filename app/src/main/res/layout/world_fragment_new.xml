@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_global"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="409dp"
+            android:layout_height="771dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="476dp">
+
+                    <TextView
+                        android:id="@+id/test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/baloo2_bold"
+                        android:text="Global Cases Details"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChartGlobal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/test" />
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="Confirmed :"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineChartGlobal" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/global_case"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="0"
+                        android:textColor="#FB8C00"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView31"
+                        app:layout_constraintStart_toEndOf="@+id/textView31"
+                        app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="Recovered :"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView31"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/global_recov"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="0"
+                        android:textColor="#069E27"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+                        app:layout_constraintStart_toEndOf="@+id/textView33"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="Deaths :"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView33"
+                        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/global_deaths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="0"
+                        android:textColor="#E53935"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                        app:layout_constraintStart_toEndOf="@+id/textView36" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/global_case"
+                        app:layout_constraintStart_toEndOf="@+id/global_case"
+                        app:layout_constraintTop_toTopOf="@+id/global_case"
+                        app:srcCompat="@drawable/ic_people" />
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/global_recov"
+                        app:layout_constraintStart_toEndOf="@+id/global_recov"
+                        app:layout_constraintTop_toBottomOf="@+id/global_case"
+                        app:srcCompat="@drawable/ic_people" />
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/global_deaths"
+                        app:layout_constraintStart_toEndOf="@+id/global_deaths"
+                        app:layout_constraintTop_toTopOf="@+id/global_deaths"
+                        app:srcCompat="@drawable/ic_people" />
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/baloo2_regular"
+                        android:text="Detail Cases Per Country"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.08"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                    <SearchView
+                        android:id="@+id/search_data"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:searchIcon="@drawable/ic_search"
+                        android:queryHint="indonesia"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView47"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView47"
+                        app:layout_constraintTop_toTopOf="@+id/textView47" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerGlobal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

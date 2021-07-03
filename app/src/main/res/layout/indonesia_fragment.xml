@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_indo">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Indonesia Covid-19 Details"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/indonesiaSummaryPie"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="2dp"
+                android:layout_height="200dp"
+                android:background="@color/iphoneThemePrimaryDark"
+                app:layout_constraintBottom_toBottomOf="@+id/indonesiaSummaryPie"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.56"
+                app:layout_constraintStart_toEndOf="@+id/indonesiaSummaryPie"
+                app:layout_constraintTop_toTopOf="@+id/indonesiaSummaryPie"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Today Cases"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/indonesiaSummaryPie" />
+
+            <com.daasuu.cat.CountAnimationTextView
+                android:id="@+id/caseIndToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Today Recovered"
+                android:textColor="@color/textColorBW"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/caseIndToday" />
+
+            <com.daasuu.cat.CountAnimationTextView
+                android:id="@+id/recoveredIdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="0"
+                android:textColor="#00897B"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Today Deaths"
+                android:textColor="@color/textColorBW"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/recoveredIdn" />
+
+            <com.daasuu.cat.CountAnimationTextView
+                android:id="@+id/deathsIdn"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="0"
+                android:textColor="#E53935"
+                app:layout_constraintEnd_toEndOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="Active Cases"
+                android:textColor="@color/textColorBW"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/deathsIdn" />
+
+            <com.daasuu.cat.CountAnimationTextView
+                android:id="@+id/activeIdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="0"
+                android:textColor="#D6A300"
+                app:layout_constraintEnd_toEndOf="@+id/textView23"
+                app:layout_constraintStart_toStartOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_italic"
+                android:text="Last Updated :"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/indonesiaSummaryPie"
+                app:layout_constraintTop_toBottomOf="@+id/indonesiaSummaryPie" />
+
+            <TextView
+                android:id="@+id/lastupdatedIdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/product_sans_italic"
+                android:text="-"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView25"
+                app:layout_constraintStart_toEndOf="@+id/textView25"
+                app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

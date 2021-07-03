@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="4dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_justified_paragraph"
+                app:layout_constraintEnd_toStartOf="@+id/tv_justified_paragraph"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_justified_paragraph"
+                app:srcCompat="@drawable/ic_warning_yellow" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/tv_justified_paragraph"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:padding="10dp"
+                android:text="@string/warning"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.972"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/justifiedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:padding="10dp"
+                android:text="@string/info"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_justified_paragraph" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/justifiedTextView" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Data Sources"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/justifiedTextView" />
+
+            <TextView
+                android:id="@+id/click_disease"
+                android:layout_width="121dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="https://disease.sh/"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35"
+                app:srcCompat="@drawable/http" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                app:srcCompat="@drawable/http" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                app:srcCompat="@drawable/http" />
+
+            <TextView
+                android:id="@+id/click_mathdro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="https://indonesia-covid-19.mathdro.id/api/provinsi"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+            <TextView
+                android:id="@+id/click_kawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="https://apicovid19indonesia-v2.vercel.app/api"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+                app:layout_constraintStart_toEndOf="@+id/imageView15"
+                app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

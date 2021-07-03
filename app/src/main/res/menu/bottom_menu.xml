@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/world_data"
+        android:icon="@drawable/ic_world"
+        android:title="World"
+        app:cnb_backgroundColor="#0F1219"/>
+
+    <item
+        android:id="@+id/indonesia_data"
+        android:icon="@drawable/ic_indonesia"
+        android:title="Indonesia"
+        app:cnb_backgroundColor="#0F1219"/>
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:cnb_backgroundColor="#0F1219"/>
+
+    <item
+        android:id="@+id/rumahsakit_data"
+        android:icon="@drawable/ic_hospital"
+        android:title="Daftar RS"
+        app:cnb_backgroundColor="#0F1219"/>
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_error_app"
+        android:title="About"
+        app:cnb_backgroundColor="#0F1219"/>
+
+
+
+
+</menu>

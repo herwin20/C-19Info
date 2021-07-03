@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0F131B">
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="#F4511E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/countryRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/baloo2_bold"
+                android:text="Country"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/casesRV"
+                app:layout_constraintHorizontal_bias="0.37"
+                app:layout_constraintStart_toEndOf="@+id/view6"
+                app:layout_constraintTop_toBottomOf="@+id/countryRV"
+                app:layout_constraintVertical_bias="0.2"
+                app:srcCompat="@drawable/ic_trending_up" />
+
+            <TextView
+                android:id="@+id/casesRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Confirmed"
+                android:textColor="#FDCE00"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toStartOf="@+id/recoveredRV"
+                app:layout_constraintStart_toEndOf="@+id/casesRV"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_trending_down" />
+
+            <TextView
+                android:id="@+id/recoveredRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Recovered"
+                android:textColor="#02FFE5"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toStartOf="@+id/deathsRV"
+                app:layout_constraintStart_toEndOf="@+id/recoveredRV"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:srcCompat="@drawable/ic_dead" />
+
+            <TextView
+                android:id="@+id/deathsRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Deaths"
+                android:textColor="#FF4D4D"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+            <ImageView
+                android:id="@+id/flagRV"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/countryRV"
+                app:layout_constraintEnd_toStartOf="@+id/countryRV"
+                app:layout_constraintTop_toTopOf="@+id/countryRV"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Population :"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <TextView
+                android:id="@+id/populationRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Active per Milion :"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/critpopulRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/timeRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Last Updated"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toStartOf="@+id/timeRV"
+                app:layout_constraintTop_toTopOf="@+id/critpopulRV"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/add_caseRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="0"
+                android:textColor="#FDCE00"
+                app:layout_constraintEnd_toEndOf="@+id/casesRV"
+                app:layout_constraintStart_toStartOf="@+id/casesRV"
+                app:layout_constraintTop_toBottomOf="@+id/casesRV" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="+"
+                android:textColor="#FDCE00"
+                app:layout_constraintBottom_toBottomOf="@+id/add_caseRV"
+                app:layout_constraintEnd_toStartOf="@+id/add_caseRV"
+                app:layout_constraintTop_toBottomOf="@+id/casesRV" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="+"
+                android:textColor="#02FFE5"
+                app:layout_constraintBottom_toBottomOf="@+id/add_recovRV"
+                app:layout_constraintEnd_toStartOf="@+id/add_recovRV"
+                app:layout_constraintTop_toBottomOf="@+id/recoveredRV" />
+
+            <TextView
+                android:id="@+id/add_recovRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="0"
+                android:textColor="#02FFE5"
+                app:layout_constraintEnd_toEndOf="@+id/recoveredRV"
+                app:layout_constraintStart_toStartOf="@+id/recoveredRV"
+                app:layout_constraintTop_toBottomOf="@+id/recoveredRV" />
+
+            <TextView
+                android:id="@+id/add_deathRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="0"
+                android:textColor="#FF4D4D"
+                app:layout_constraintEnd_toEndOf="@+id/deathsRV"
+                app:layout_constraintStart_toStartOf="@+id/deathsRV"
+                app:layout_constraintTop_toBottomOf="@+id/deathsRV" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="+"
+                android:textColor="#FF4D4D"
+                app:layout_constraintBottom_toBottomOf="@+id/add_deathRV"
+                app:layout_constraintEnd_toStartOf="@+id/add_deathRV"
+                app:layout_constraintTop_toBottomOf="@+id/deathsRV" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="Tracing Testing :"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/populationRV"
+                app:layout_constraintStart_toEndOf="@+id/populationRV"
+                app:layout_constraintTop_toTopOf="@+id/populationRV"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/testRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/baloo2_regular"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/textView52"
+                app:layout_constraintStart_toEndOf="@+id/textView52"
+                app:layout_constraintTop_toTopOf="@+id/textView52" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
