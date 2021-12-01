@@ -297,7 +297,7 @@ public class WorldFragmentNew extends Fragment {
                 int case_4 = cases_global.getInt(empat);
                 int case_3 = cases_global.getInt(tiga);
                 int case_2 = cases_global.getInt(dua);
-                int case_1 = cases_global.getInt(satu);
+                //int case_1 = cases_global.getInt(satu);
 
                 int recov_15 = cases_recov.getInt(limabelas);
                 int recov_14 = cases_recov.getInt(empatbelas);
@@ -313,7 +313,7 @@ public class WorldFragmentNew extends Fragment {
                 int recov_4 = cases_recov.getInt(empat);
                 int recov_3 = cases_recov.getInt(tiga);
                 int recov_2 = cases_recov.getInt(dua);
-                int recov_1 = cases_recov.getInt(satu);
+                //int recov_1 = cases_recov.getInt(satu);
 
                 int death_15 = cases_death.getInt(limabelas);
                 int death_14 = cases_death.getInt(empatbelas);
@@ -329,9 +329,9 @@ public class WorldFragmentNew extends Fragment {
                 int death_4 = cases_death.getInt(empat);
                 int death_3 = cases_death.getInt(tiga);
                 int death_2 = cases_death.getInt(dua);
-                int death_1 = cases_death.getInt(satu);
+                //int death_1 = cases_death.getInt(satu);
 
-                int todaycase0 = case_1 - case_2;
+                //int todaycase0 = case_1 - case_2;
                 int todaycase1 = case_2 - case_3;
                 int todaycase2 = case_3 - case_4;
                 int todaycase3 = case_4 - case_5;
@@ -345,7 +345,7 @@ public class WorldFragmentNew extends Fragment {
                 int todaycase11 = case_13 - case_14;
                 int todaycase12 = case_14 - case_15;
 
-                int todayrecov0 = recov_1 - recov_2;
+                //int todayrecov0 = recov_1 - recov_2;
                 int todayrecov1 = recov_2 - recov_3;
                 int todayrecov2 = recov_3 - recov_4;
                 int todayrecov3 = recov_4 - recov_5;
@@ -359,7 +359,7 @@ public class WorldFragmentNew extends Fragment {
                 int todayrecov11 = recov_13 - recov_14;
                 int todayrecov12 = recov_14 - recov_15;
 
-                int todaydeath0 = death_1 - death_2;
+                //int todaydeath0 = death_1 - death_2;
                 int todaydeath1 = death_2 - death_3;
                 int todaydeath2 = death_3 - death_4;
                 int todaydeath3 = death_4 - death_5;
@@ -386,7 +386,7 @@ public class WorldFragmentNew extends Fragment {
                 dataCase.add(new Entry(10, todaycase3));
                 dataCase.add(new Entry(11, todaycase2));
                 dataCase.add(new Entry(12, todaycase1));
-                dataCase.add(new Entry(13, todaycase0));
+                //dataCase.add(new Entry(13, todaycase0));
 
                 List<Entry> dataRecov = new ArrayList<>();
                 dataRecov.add(new Entry(1, todayrecov12));
@@ -401,7 +401,7 @@ public class WorldFragmentNew extends Fragment {
                 dataRecov.add(new Entry(10, todayrecov3));
                 dataRecov.add(new Entry(11, todayrecov2));
                 dataRecov.add(new Entry(12, todayrecov1));
-                dataRecov.add(new Entry(13, todayrecov0));
+                //dataRecov.add(new Entry(13, todayrecov0));
 
                 List<Entry> dataDeath = new ArrayList<>();
                 dataDeath.add(new Entry(1, todaydeath12));
@@ -416,7 +416,7 @@ public class WorldFragmentNew extends Fragment {
                 dataDeath.add(new Entry(10, todaydeath3));
                 dataDeath.add(new Entry(11, todaydeath2));
                 dataDeath.add(new Entry(12, todaydeath1));
-                dataDeath.add(new Entry(13, todaydeath0));
+                //dataDeath.add(new Entry(13, todaydeath0));
 
                 // Chart Case
                 LineDataSet dataSet = new LineDataSet(dataCase, "Case per Day");

@@ -205,9 +205,9 @@ public class HomeFragmentNew extends Fragment {
                         int case_4 = cases_active.getInt(empat);
                         int case_3 = cases_active.getInt(tiga);
                         int case_2 = cases_active.getInt(dua);
-                        int case_1 = cases_active.getInt(satu);
+                        //int case_1 = cases_active.getInt(satu);
 
-                        int todaycase = case_1 - case_2;
+                        //int todaycase = case_1 - case_2;
                         int todaycase0 = case_2 - case_3;
                         int todaycase1 = case_3 - case_4;
                         int todaycase2 = case_4 - case_5;
@@ -235,9 +235,9 @@ public class HomeFragmentNew extends Fragment {
                         int recovered_4 = recovereds_active.getInt(empat);
                         int recovered_3 = recovereds_active.getInt(tiga);
                         int recovered_2 = recovereds_active.getInt(dua);
-                        int recovered_1 = recovereds_active.getInt(satu);
+                        //int recovered_1 = recovereds_active.getInt(satu);
 
-                        int todayrecovered = recovered_1 - recovered_2;
+                        //int todayrecovered = recovered_1 - recovered_2;
                         int todayrecovered0 = recovered_2 - recovered_3;
                         int todayrecovered1 = recovered_3 - recovered_4;
                         int todayrecovered2 = recovered_4 - recovered_5;
@@ -265,9 +265,9 @@ public class HomeFragmentNew extends Fragment {
                         int deaths_4 = deathss_active.getInt(empat);
                         int deaths_3 = deathss_active.getInt(tiga);
                         int deaths_2 = deathss_active.getInt(dua);
-                        int deaths_1 = deathss_active.getInt(satu);
+                        //int deaths_1 = deathss_active.getInt(satu);
 
-                        int todaydeaths = deaths_1 - deaths_2;
+                        //int todaydeaths = deaths_1 - deaths_2;
                         int todaydeaths0 = deaths_2 - deaths_3;
                         int todaydeaths1 = deaths_3 - deaths_4;
                         int todaydeaths2 = deaths_4 - deaths_5;
@@ -294,7 +294,7 @@ public class HomeFragmentNew extends Fragment {
                         dataCase.add(new Entry(10, todaycase2));
                         dataCase.add(new Entry(11, todaycase1));
                         dataCase.add(new Entry(12, todaycase0));
-                        dataCase.add(new Entry(13, todaycase));
+                        //dataCase.add(new Entry(13, todaycase));
 
                         List<Entry> dataRecovered = new ArrayList<>();
                         dataRecovered.add(new Entry(1, todayrecovered10));
@@ -309,7 +309,7 @@ public class HomeFragmentNew extends Fragment {
                         dataRecovered.add(new Entry(10, todayrecovered2));
                         dataRecovered.add(new Entry(11, todayrecovered1));
                         dataRecovered.add(new Entry(12, todayrecovered0));
-                        dataRecovered.add(new Entry(13, todayrecovered));
+                        //dataRecovered.add(new Entry(13, todayrecovered));
 
                         List<Entry> dataDeaths = new ArrayList<>();
                         dataDeaths.add(new Entry(1, todaydeaths11));
@@ -324,7 +324,7 @@ public class HomeFragmentNew extends Fragment {
                         dataDeaths.add(new Entry(10, todaydeaths2));
                         dataDeaths.add(new Entry(11, todaydeaths1));
                         dataDeaths.add(new Entry(12, todaydeaths0));
-                        dataDeaths.add(new Entry(13, todaydeaths));
+                        //dataDeaths.add(new Entry(13, todaydeaths));
 
                         // Chart Case
                         LineDataSet dataSet = new LineDataSet(dataCase, "Case per Day");
@@ -387,7 +387,7 @@ public class HomeFragmentNew extends Fragment {
                         mLineChart.setDragEnabled(true);
                         mLineChart.invalidate();
 
-                        lastUpdatedCases.setText(satu);
+                        lastUpdatedCases.setText(dua);
 
                     }
                     catch (JSONException e){
